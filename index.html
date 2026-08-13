@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Barbearia premium com cortes, barba e atendimento personalizado." />
+    <meta name="theme-color" content="#0c0c0c" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Barbearia Hils Dorf" />
+    <meta property="og:description" content="Estilo, precisão e tradição em cada detalhe." />
+    <meta property="og:locale" content="pt_BR" />
+    <title>Barbearia Hils Dorf | Barbearia Premium</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <!-- Carregamento inicial, removido pelo módulo principal. -->
+    <div class="loader" aria-hidden="true"><span class="loader__mark">HD</span></div>
+
+    <header class="site-header" id="topo">
+      <div class="container header__content">
+        <a class="brand" href="#inicio" aria-label="Voltar ao início">
+          <span class="brand__mark">HD</span><span class="brand__name" data-business-name></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-navigation" id="main-navigation" aria-label="Navegação principal">
+          <ul class="navigation-list" data-navigation></ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: proposta de valor e ações principais. -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero__image" data-hero-image></div>
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+          <p class="eyebrow" data-hero-eyebrow></p>
+          <h1 id="hero-title" data-hero-title></h1>
+          <p class="hero__subtitle" data-hero-subtitle></p>
+          <div class="hero__actions">
+            <a class="button button--primary" data-booking-link target="_blank" rel="noopener" data-hero-primary></a>
+            <a class="button button--ghost" data-whatsapp-link target="_blank" rel="noopener" data-hero-secondary></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre: apresenta o posicionamento do negócio. -->
+      <section class="section about" id="sobre" aria-labelledby="about-title">
+        <div class="container split-layout">
+          <div class="about__image" data-about-image role="img"></div>
+          <div class="section__content">
+            <p class="eyebrow">A experiência</p>
+            <h2 id="about-title" data-about-title></h2>
+            <p data-about-text></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Serviços: cards renderizados a partir de js/config.js. -->
+      <section class="section section--surface" id="servicos" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section__heading"><p class="eyebrow">O que fazemos</p><h2 id="services-title">Serviços feitos para você.</h2></div>
+          <div class="card-grid" data-services></div>
+        </div>
+      </section>
+
+      <!-- Diferenciais: razões para escolher o negócio. -->
+      <section class="section" id="diferenciais" aria-labelledby="differentials-title">
+        <div class="container section__heading section__heading--center"><p class="eyebrow">Nosso padrão</p><h2 id="differentials-title">Cuidado em cada etapa.</h2><ul class="differentials-list" data-differentials></ul></div>
+      </section>
+
+      <!-- Galeria: imagens e lightbox são controlados por js/gallery.js. -->
+      <section class="section section--surface" id="galeria" aria-labelledby="gallery-title">
+        <div class="container"><div class="section__heading"><p class="eyebrow">Ambiente e estilo</p><h2 id="gallery-title">Conheça nosso espaço.</h2></div><div class="gallery-grid" data-gallery></div></div>
+      </section>
+
+      <!-- Avaliações: slider simples controlado por js/slider.js. -->
+      <section class="section" id="avaliacoes" aria-labelledby="reviews-title">
+        <div class="container review-section"><div class="section__heading"><p class="eyebrow">Quem conhece, recomenda</p><h2 id="reviews-title">A confiança de nossos clientes.</h2></div><div class="review-slider" data-review-slider></div></div>
+      </section>
+
+      <!-- CTA: convite direto para o agendamento. -->
+      <section class="section section--cta" aria-labelledby="cta-title">
+        <div class="container cta"><p class="eyebrow">Seu próximo horário</p><h2 id="cta-title">Reserve seu momento.</h2><a class="button button--primary" data-booking-link target="_blank" rel="noopener">Agendar agora</a></div>
+      </section>
+
+      <!-- Horários e localização. -->
+      <section class="section section--surface" id="contato" aria-labelledby="contact-title">
+        <div class="container contact-grid"><div><p class="eyebrow">Visite-nos</p><h2 id="contact-title">Estamos esperando por você.</h2><address data-address></address><a class="text-link" data-maps-link target="_blank" rel="noopener">Como chegar</a></div><div><h3>Horários</h3><dl class="hours-list" data-hours></dl></div></div>
+      </section>
+    </main>
+
+    <!-- Rodapé: contatos e links institucionais. -->
+    <footer class="site-footer"><div class="container footer__content"><p>© <span data-current-year></span> <span data-business-name> </span>. Todos os direitos reservados.</p><a data-instagram-link target="_blank" rel="noopener" aria-label="Instagram">Instagram</a></div></footer>
+
+    <a class="whatsapp-float" data-whatsapp-link target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">WhatsApp</a>
+    <dialog class="lightbox" data-lightbox><button class="lightbox__close" type="button" aria-label="Fechar imagem">×</button><img class="lightbox__image" src="" alt="" /></dialog>
+
+    <script src="js/config.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+/* Aprimoramentos progressivos para telas maiores. */
+@media (min-width: 42rem) {
+  .section { padding-block: var(--space-4xl); }
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .gallery-item:nth-child(1) { grid-row: span 2; min-height: 35rem; }
+  .gallery-item { min-height: 17rem; }
+  .contact-grid { grid-template-columns: 1.1fr 0.9fr; }
+}
+
+@media (min-width: 56rem) {
+  .menu-toggle { display: none; }
+  .main-navigation { display: block; }
+  .navigation-list { display: flex; align-items: center; gap: var(--space-lg); padding: 0; }
+  .split-layout { grid-template-columns: 1fr 1fr; align-items: center; gap: var(--space-3xl); }
+  .about__image { min-height: 32rem; }
+  .hero__content { padding-bottom: var(--space-4xl); }
+}
